@@ -1,0 +1,113 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+
+        }
+        
+        nav a:hover {
+            background-color: #1663e3;
+            opacity: 0.5;
+            color: black;
+        }
+        .main-content h1 {
+            font-size: 48px;
+            color: #333;
+        }
+        .main-content p {
+            font-size: 18px;
+            color: #666;
+        }
+        button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        portfolioimage{
+            z-index: 1;
+            position: absolute;
+            top: 154px;
+            left: 227px;
+        }
+        nav a {
+            z-index: 2;
+            color: black;
+            padding: 500px 200px;
+            text-decoration: none;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>Your go-to place for everything awesome!</p>
+    </header>
+    
+    <portfolioimage>
+        <img src="./portfoliotest.png" alt="" height="1018" width="440">
+    </portfolioimage>
+    
+    <nav>
+        <a href="ABOUTPAGE.html" onclick="navigateToPage('about')">About</a>
+        <a href="PORTFOLIOPAGE.html" onclick="navigateToPage('porfolio')">Portfolio</a>
+        <a href="BLOGPAGE.html" onclick="navigateToPage('blog')">Blog</a>
+        <a href="CONTACTPAGE.html" onclick="navigateToPage('contact')">Contact</a>
+    </nav>
+
+    
+    <script>
+        // Function to navigate to different pages
+        function navigateToPage(page) {
+            let url;
+            switch (page) {
+                case 'home':
+                    url = 'HOMEPAGE.html';  // Replace with actual URL of your Home page
+                    break;
+                case 'about':
+                    url = 'ABOUTPAGE.html'; // Replace with actual URL of your About page
+                    break;
+                case 'portfolio':
+                    url = 'PORTFOLIOPAGE.html'; // Replace with actual URL of your Services page
+                    break;
+                case 'blog':
+                    url = 'BLOGPAGE.html'; // Replace with actual URL of your Contact page
+                    break;
+                case 'contact':
+                    url = 'CONTACTPAGE.html'; // Replace with actual URL of your Contact page
+                    break;
+                default:
+                    url = 'index.html'; // Default page (home)
+                    break;
+            }
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
