@@ -14,8 +14,7 @@
             background-color: #f4f4f4;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
-            box-sizing: border-box;  /* Ensure padding and margin don't overflow */
+            box-sizing: border-box;
         }
 
         /* Header styling */
@@ -34,7 +33,7 @@
         }
 
         .main-content h1 {
-            font-size: 4vw;  /* Adjusts based on viewport width */
+            font-size: 4vw;
             color: #333;
         }
 
@@ -46,7 +45,7 @@
         /* Portfolio Image styling */
         .portfolio-image {
             width: 100%;
-            max-width: 440px; /* Ensure it doesn't grow beyond this size */
+            max-width: 440px;
             height: auto;
             margin: 20px auto;
         }
@@ -55,12 +54,13 @@
         nav {
             display: flex;
             justify-content: center; /* Centers the navigation links horizontally */
-            align-items: center;    /* Centers the navigation links vertically */
-            height: 100vh;          /* Ensure navigation takes up the full viewport height */
             position: absolute;
-            top: 0;
-            width: 100%;            /* Makes the navigation take the full width of the page */
+            top: 50%; /* Center the nav vertically */
+            left: 50%; /* Center the nav horizontally */
+            transform: translate(-50%, -50%); /* Adjust position to make the links exactly centered */
             background-color: #222;
+            padding: 10px 20px;
+            border-radius: 10px;
         }
         
         nav a {
@@ -69,7 +69,7 @@
             text-decoration: none;
             text-align: center;
             border-radius: 5px;
-            margin: 0 15px;         /* Space between each navigation item */
+            margin: 0 15px;
         }
 
         nav a:hover {
@@ -88,7 +88,7 @@
             }
 
             nav {
-                flex-direction: column; /* Stack links vertically on smaller screens */
+                flex-direction: column;
                 gap: 10px;
             }
         }
@@ -105,7 +105,6 @@
     </div>
     
     <nav>
-        <!-- Removed the "Home" button, leaving only About, Portfolio, Blog, and Contact -->
         <a href="ABOUTPAGE.html" onclick="navigateToPage('about')">About</a>
         <a href="PORTFOLIOPAGE.html" onclick="navigateToPage('portfolio')">Portfolio</a>
         <a href="BLOGPAGE.html" onclick="navigateToPage('blog')">Blog</a>
