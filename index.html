@@ -45,23 +45,22 @@
         /* Navigation Styling */
         nav {
             display: flex;
-            justify-content: center; /* Centers the navigation links horizontally */
+            justify-content: space-between; /* Spaces out the links between each other */
             position: absolute;
             top: 50%; /* Center the nav vertically */
             left: 50%; /* Center the nav horizontally */
             transform: translate(-50%, -50%); /* Adjust position to make the links exactly centered */
-            background-color: #222;
-            padding: 10px 20px;
-            border-radius: 10px;
+            width: 60%; /* Adjust width to leave space between links */
         }
-        
+
         nav a {
             color: white;
             padding: 10px 20px;
             text-decoration: none;
             text-align: center;
             border-radius: 5px;
-            margin: 0 15px;
+            background-color: #222; /* Background color of the buttons */
+            transition: background-color 0.3s ease;
         }
 
         nav a:hover {
@@ -81,7 +80,8 @@
 
             nav {
                 flex-direction: column;
-                gap: 10px;
+                gap: 10px; /* Adds spacing between buttons in column layout */
+                width: 80%; /* Adjust width to fit the screen */
             }
         }
     </style>
@@ -91,8 +91,6 @@
         <h1>Welcome to My Website</h1>
         <p>Your go-to place for everything awesome!</p>
     </header>
-    
-    
     
     <nav>
         <a href="ABOUTPAGE.html" onclick="navigateToPage('about')">About</a>
