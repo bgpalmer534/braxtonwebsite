@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,62 +6,104 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Future of Music</title>
     <style>
+        /* Basic reset and typography */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
+
+        /* Header styling */
         header {
             background-color: #333;
             color: white;
             padding: 20px;
             text-align: center;
         }
+
+        /* Navigation Styling */
         nav {
             display: flex;
             justify-content: center;
-
+            gap: 20px;
+            background-color: #222;
+            padding: 10px;
         }
         
-        nav a:hover {
-            background-color: #1663e3;
-            opacity: 0.5;
-            color: black;
-        }
-        .main-content h1 {
-            font-size: 48px;
-            color: #333;
-        }
-        .main-content p {
-            font-size: 18px;
-            color: #666;
-        }
-        button {
-            background-color: #4CAF50; /* Green */
+        nav a {
             color: white;
             padding: 10px 20px;
-            font-size: 16px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #1663e3;
+            opacity: 0.7;
+        }
+
+        /* Main content area */
+        .main-content {
+            text-align: center;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .main-content h1 {
+            font-size: 4vw;  /* Adjusts based on viewport width */
+            color: #333;
+        }
+
+        .main-content p {
+            font-size: 2vw;
+            color: #666;
+        }
+
+        /* Button Styling */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            font-size: 1rem;
             border: none;
             cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
         }
+
         button:hover {
             background-color: #45a049;
         }
-        portfolioimage{
-            z-index: 1;
-            position: absolute;
-            top: 154px;
-            left: 227px;
+
+        /* Portfolio Image styling */
+        .portfolio-image {
+            width: 100%;
+            max-width: 440px; /* Ensure it doesn't grow beyond this size */
+            height: auto;
+            margin: 20px auto;
         }
-        nav a {
-            z-index: 2;
-            color: black;
-            padding: 500px 200px;
-            text-decoration: none;
-            text-align: center;
-            
+
+        /* Adjusting image size for different screen widths */
+        @media (max-width: 768px) {
+            .main-content h1 {
+                font-size: 6vw;
+            }
+
+            .main-content p {
+                font-size: 4vw;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
+
     </style>
 </head>
 <body>
@@ -70,18 +112,17 @@
         <p>Your go-to place for everything awesome!</p>
     </header>
     
-    <portfolioimage>
-        <img src="./portfoliotest.png" alt="" height="1018" width="440">
-    </portfolioimage>
+    <div class="main-content">
+        <img class="portfolio-image" src="./portfoliotest.png" alt="Portfolio image">
+    </div>
     
     <nav>
         <a href="ABOUTPAGE.html" onclick="navigateToPage('about')">About</a>
-        <a href="PORTFOLIOPAGE.html" onclick="navigateToPage('porfolio')">Portfolio</a>
+        <a href="PORTFOLIOPAGE.html" onclick="navigateToPage('portfolio')">Portfolio</a>
         <a href="BLOGPAGE.html" onclick="navigateToPage('blog')">Blog</a>
         <a href="CONTACTPAGE.html" onclick="navigateToPage('contact')">Contact</a>
     </nav>
 
-    
     <script>
         // Function to navigate to different pages
         function navigateToPage(page) {
@@ -94,10 +135,10 @@
                     url = 'ABOUTPAGE.html'; // Replace with actual URL of your About page
                     break;
                 case 'portfolio':
-                    url = 'PORTFOLIOPAGE.html'; // Replace with actual URL of your Services page
+                    url = 'PORTFOLIOPAGE.html'; // Replace with actual URL of your Portfolio page
                     break;
                 case 'blog':
-                    url = 'BLOGPAGE.html'; // Replace with actual URL of your Contact page
+                    url = 'BLOGPAGE.html'; // Replace with actual URL of your Blog page
                     break;
                 case 'contact':
                     url = 'CONTACTPAGE.html'; // Replace with actual URL of your Contact page
