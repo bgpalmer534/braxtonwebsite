@@ -57,15 +57,20 @@
             display: flex; /* Use flexbox for button content */
             flex-grow: 1; /* Make buttons grow to fill available space */
             color: #333;
-            padding: 20px 0;
+            padding: 20px;
             text-decoration: none;
             text-align: center;
             border: 2px solid #333; /* Border to define button edges */
             border-radius: 0; /* No rounded corners */
             background-color: transparent; /* Make button background transparent */
             transition: background-color 0.3s ease, color 0.3s ease;
-            align-items: center; /* Vertically center text */
-            justify-content: center; /* Horizontally center text */
+            align-items: center; /* Vertically center text and images */
+            justify-content: center; /* Horizontally center text and images */
+        }
+
+        nav a img {
+            height: 30px; /* Set image height */
+            margin-right: 10px; /* Space between the image and text */
         }
 
         nav a:hover {
@@ -88,10 +93,18 @@
     </header>
     
     <nav>
-        <a href="ABOUTPAGE.html" onclick="navigateToPage('about')">About</a>
-        <a href="PORTFOLIOPAGE.html" onclick="navigateToPage('portfolio')">Portfolio</a>
-        <a href="BLOGPAGE.html" onclick="navigateToPage('blog')">Blog</a>
-        <a href="CONTACTPAGE.html" onclick="navigateToPage('contact')">Contact</a>
+        <a href="ABOUTPAGE.html" onclick="navigateToPage('about')">
+            <img src="about-icon.png" alt="About">About
+        </a>
+        <a href="PORTFOLIOPAGE.html" onclick="navigateToPage('portfolio')">
+            <img src="portfolio-icon.png" alt="Portfolio">Portfolio
+        </a>
+        <a href="BLOGPAGE.html" onclick="navigateToPage('blog')">
+            <img src="blog-icon.png" alt="Blog">Blog
+        </a>
+        <a href="CONTACTPAGE.html" onclick="navigateToPage('contact')">
+            <img src="contact-icon.png" alt="Contact">Contact
+        </a>
     </nav>
 
     <script>
