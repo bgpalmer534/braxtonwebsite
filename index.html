@@ -65,30 +65,6 @@
             color: #666;
         }
 
-        /* Button Styling */
-        .button-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            flex-wrap: wrap; /* Allows buttons to wrap in smaller screens */
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 24px;
-            font-size: 1rem;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            margin: 5px;
-            max-width: 90%; /* Prevents buttons from being too wide on small screens */
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
         /* Portfolio Image styling */
         .portfolio-image {
             width: 100%;
@@ -111,15 +87,6 @@
                 flex-direction: column;
                 gap: 10px;
             }
-
-            .button-container {
-                flex-direction: column; /* Stack buttons vertically on small screens */
-                align-items: center; /* Center the buttons */
-            }
-
-            button {
-                width: 100%; /* Make buttons full width on small screens */
-            }
         }
     </style>
 </head>
@@ -131,13 +98,6 @@
     
     <div class="main-content">
         <img class="portfolio-image" src="./portfoliotest.png" alt="Portfolio image">
-        <div class="button-container">
-            <button onclick="navigateToPage('home')">Home</button>
-            <button onclick="navigateToPage('about')">About</button>
-            <button onclick="navigateToPage('portfolio')">Portfolio</button>
-            <button onclick="navigateToPage('blog')">Blog</button>
-            <button onclick="navigateToPage('contact')">Contact</button>
-        </div>
     </div>
     
     <nav>
@@ -152,9 +112,6 @@
         function navigateToPage(page) {
             let url;
             switch (page) {
-                case 'home':
-                    url = 'HOMEPAGE.html';  // Replace with actual URL of your Home page
-                    break;
                 case 'about':
                     url = 'ABOUTPAGE.html'; // Replace with actual URL of your About page
                     break;
