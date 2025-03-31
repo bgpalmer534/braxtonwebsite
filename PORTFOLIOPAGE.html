@@ -40,6 +40,7 @@
             height: 400px;
             padding: 20px;
             gap: 50px; /* Add space between the image and text */
+            flex-direction: column; /* Stack the sections vertically */
         }
         .main-content img {
             width: 642px;  /* Set width */
@@ -81,6 +82,12 @@
         .audio-player {
             width: 300px;
         }
+        /* Style for separating line */
+        hr {
+            width: 80%;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+        }
     </style>
 </head>
 <body>
@@ -94,22 +101,49 @@
     </nav>
 
     <div class="main-content">
-        <!-- Left side (Image) -->
-        <div>
-            <img src="gameimage.png" alt="Game Image">
+        <!-- First Image and Text Block -->
+        <div class="content-block">
+            <!-- Left side (Image) -->
+            <div>
+                <img src="gameimage.png" alt="Game Image">
+            </div>
+
+            <!-- Right side (Text + Audio Player) -->
+            <div class="text">
+                <h1>Rock Rumble - Soundtrack Track 2</h1>
+                <p>Previewed below is the second track of my work-in-progress game, Rock Rumble, a fun twist on Gridiron football.</p>
+                <p>Set in a whimsical galaxy setting, the track reflects the more futuristic/galactic feel of the game, relying heavily on more electronic melodies and bitcrushed drums.</p>
+
+                <!-- Audio Player -->
+                <audio class="audio-player" controls>
+                    <source src="track2_ingametrack.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
         </div>
 
-        <!-- Right side (Text + Audio Player) -->
-        <div class="text">
-            <h1>Rock Rumble - Soundtrack Track 2</h1>
-            <p>Previewed below is the second track of my work-in-progress game, Rock Rumble, a fun twist on Gridiron football.</p>
-            <p>Set in a whimsical galaxy setting, the track reflects the more futuristic/galactic feel of the game, relying heavily on more electronic melodies and bitcrushed drums.</p>
+        <!-- Separator (Thin Box) -->
+        <hr>
 
-            <!-- Audio Player -->
-            <audio class="audio-player" controls>
-                <source src="track2_ingametrack.mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-            </audio>
+        <!-- Second Image and Text Block -->
+        <div class="content-block">
+            <!-- Left side (Image) -->
+            <div>
+                <img src="gameimage2.png" alt="Game Image 2">
+            </div>
+
+            <!-- Right side (Text + Audio Player) -->
+            <div class="text">
+                <h1>Rock Rumble - Soundtrack Track 3</h1>
+                <p>Here is the third track from my upcoming game, Rock Rumble. This track has a darker, more atmospheric vibe, enhancing the tension during the final moments of a match.</p>
+                <p>It features deep basslines, eerie synths, and a mix of acoustic and electronic percussion to complement the dramatic tension of the game’s story.</p>
+
+                <!-- Audio Player -->
+                <audio class="audio-player" controls>
+                    <source src="track3_ingametrack.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
         </div>
     </div>
 
