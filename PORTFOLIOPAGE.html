@@ -35,10 +35,11 @@
         }
         .main-content {
             display: flex;
-            justify-content: space-between;
+            justify-content: center; /* Center content horizontally */
             align-items: center;
             height: 400px;
             padding: 20px;
+            gap: 20px; /* Add space between the image and text */
         }
         .main-content img {
             width: 642px;  /* Set width */
@@ -46,7 +47,7 @@
             object-fit: cover; /* Ensures the image doesn't stretch out of proportion */
         }
         .main-content .text {
-            width: 45%;
+            width: 45%; /* Set text box width */
             text-align: left;
         }
         .main-content h1 {
@@ -95,7 +96,7 @@
     <div class="main-content">
         <!-- Left side (Image) -->
         <div>
-            <img src="gameimage.png" alt= height="359" width="642">
+            <img src="gameimage.png" alt="Game Image">
         </div>
 
         <!-- Right side (Text + Audio Player) -->
